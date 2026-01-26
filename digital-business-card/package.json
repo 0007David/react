@@ -1,0 +1,22 @@
+{
+  "name": "digital-business-card",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "description": "Digital Card profile",
+  "main": "index.js",
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "vite": "latest"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "*"
+  },
+  "author": "Dave",
+  "license": "ISC"
+}
