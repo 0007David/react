@@ -33,3 +33,8 @@ What we'll learn
 - Complex Objects
 - React Forms <br/> Form Action
 - Conditional
+- Passing Data around React <br> Se puede pasar los datos llevando como propiedad a un componente superior (padre) y pasarlo como properties
+   - Redux
+   - Zoo Standar
+   - Context
+- 
