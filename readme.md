@@ -27,7 +27,7 @@ What we'll learn
 
 ## React State (Dynamic Web App)
 
-- Checf Claude
+- [Checf Claude Figma](https://www.figma.com/proto/73iyU720zWmrWgJsok5tYE/Chef-Claude?node-id=1-972&t=FlwVw7UCqr1O4Q1t-1)
 - Read-Write : user has ability to change data 
 - Highly interative
 - Complex Objects
@@ -37,4 +37,8 @@ What we'll learn
    - Redux
    - Zoo Standar
    - Context
-- 
+- Sound Pads Project
+  - Local state
+  - shared state
+  - Updating item in array
+-  
