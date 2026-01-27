@@ -41,4 +41,3 @@ What we'll learn
   - Local state
   - shared state
   - Updating item in array
--  
