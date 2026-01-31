@@ -1,0 +1,22 @@
+{
+  "name": "meme-generator-2",
+  "version": "1.0.0",
+  "description": "generator of meme",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "vite": "latest"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "*"
+  },
+  "author": "Dave",
+  "license": "ISC"
+}
