@@ -1,7 +1,7 @@
 import React from "react";
-import ClaudeRecipe from "./components/ClaudeRecipe";
-import IngredientsList from "./components/IngredientsList";
-import { getRecipeFromMistral, getRecipeApi } from "./ai";
+import ClaudeRecipe from "./ClaudeRecipe";
+import IngredientsList from "./IngredientsList";
+import { getRecipeFromMistral, getRecipeApi } from "../ai";
 
 
 /**
@@ -30,6 +30,26 @@ function Main() {
     //const ingredients = ["all the main spices", "pasta", "ground beef", "tomato paste"]
     const [ingredients, setIngredients] = React.useState(["all the main spices", "pasta", "ground beef", "tomato paste"]);
     const [recipe, setRecipe] = React.useState("");
+    const recipeSection = React.useRef(null)
+
+    /**
+     * Challenge:
+     * Add a new effect that calls `recipeSection.current.scrollIntoView()`
+     * only if recipe is not an empty string and recipeSection.current is not null.
+     * Think carefully about what value(s) you would want to include in
+     * the dependencies array.
+     */
+
+    React.useEffect(() => {
+        if (recipe !== "" && recipeSection.current !== null) {
+            recipeSection.current.scrollIntoView({ behavior: "smooth" })
+            // const yCoord = recipeSection.current.getBoundingClientRect().top + window.scrollY
+            // window.scroll({
+            //     top: yCoord,
+            //     behavior: "smooth"
+            // })
+        }
+    }, [recipe])
 
 
     /**
@@ -108,6 +128,7 @@ function Main() {
             </form>
             {(ingredients.length > 0) &&
                 <IngredientsList
+                    ref={recipeSection}
                     ingredients={ingredients}
                     getRecipe={getRecipe}
                 />}
