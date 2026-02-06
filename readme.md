@@ -117,9 +117,13 @@ This is where the concept of UI as a function of state comes from.
 
 - advanced Topic
   - Reusability components in React 
-  - 
+  - [Managing State React](https://react.dev/learn/managing-state)
+
 
 ### Project1: Tenzies Game
+
+
+- [Figma Project](https://www.figma.com/file/MoLwFPHNHJVrzdFurxHzNV/Meme-Generator?node-id=0%3A1)
 
 ### Project2: Assembly: Endgame
 
