@@ -66,9 +66,30 @@ button {
     font-weight: bold;
 }
 
+/* Con la linea 82-84
+cambio de  width: 150px → auto, cambio a 'Intrinsic sizing'
+Uso de padding en lugar de width -> Content-based layout
+Eliminación de tamaño fijo -> Flexible component design
+Mejor accesibilidad  -> WCAG-compliant UI
+
+Esto encaja con:
+OOCSS → estructura separada del contenido
+BEM → componente autónomo
+Design Systems → botones escalables
+Mobile First → no dependes de px fijos 
+
+✔ Tamaño táctil
+✔ Tipografía relativa
+✔ 100% responsive
+
+*/
+
 button.roll-dice {
     height: 50px;
-    width: 100px;
+    white-space: nowrap;
+    width: auto;
+    /*enfoque moderno*/
+    padding: 6px 21px;
     border-radius: 6px;
     background-color: #5035FF;
     color: white;

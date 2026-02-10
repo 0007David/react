@@ -1,6 +1,8 @@
 import React from 'react';
 import Die from './Die';
-import { nanoid } from "nanoid"
+import { nanoid } from "nanoid";
+// import { useWindowSize } from 'react-use'
+import Confetti from 'react-confetti';
 
 /**
  * Challenge:
@@ -28,12 +30,33 @@ import { nanoid } from "nanoid"
  * Log the array of numbers to the console for now
  */
 
-
-
-
-
 function Main() {
     const [dices, setDices] = React.useState(generateAllNewDice())
+    // const { width, height } = useWindowSize()
+    /**
+     * Challenge:
+     * Log "Game won!" to the console only if the 2 winning
+     * conditions are met.
+     * 
+     * 1. all the dice are being held, and
+     * 2. all the dice have the same value
+     * 
+     * For now, no need to even save a variable!
+     */
+
+    /**
+     * Challenge part 2:
+     * 1. Create a new `gameWon` variable.
+     * 2. If `gameWon` is true, change the button text to
+     *    "New Game" instead of "Roll"
+     */
+    const gameWon = dices.every(
+        ele => (ele.isHeld && ele.value === dices[0].value));
+
+    /**
+     * Challenge:
+     * Make the confetti drop when the game is won! 🎉🎊
+     */
 
     function generateAllNewDice() {
         // Imperativa approach
@@ -129,21 +152,45 @@ function Main() {
     */
 
     function hold(id) {
+
         setDices(prevDices => prevDices.map(die => {
             return die.id === id ?
                 { ...die, isHeld: !die.isHeld } :
                 die
         }))
     }
-    return (
-        <main>
-            <h1 className="title">Tenzies</h1>
-            <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
-            <div className="dice-container">
-                {dicesElements}
-            </div>
-            <button className="roll-dice" onClick={rollDice}>Roll</button>
-        </main>
+
+    /**
+     * Critical thinking time!
+     * 
+     * We want to indicate to the user that the game is over
+     * if (1) all the dice are held, and (2) all the dice have
+     * the same value.
+     * 
+     * How might we do this? Some questions to consider:
+     * 
+     * 1. Do we need to save a `gameWon` value in state? If so, why?
+     *    If not, why not?
+     * 
+     * 2. Do we need to create a side effect to synchronize the `gameWon`
+     *    value (whether it's in state or not) with the current state of 
+     *    the dice?
+     * 
+     * Conclusion:
+     * We can derive the gameWon status based on the condition(s) of the current
+     * dice state on every render.
+     */
+
+
+    return (<main>
+        {gameWon ? <Confetti /> : null}
+        <h1 className="title">Tenzies</h1>
+        <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
+        <div className="dice-container">
+            {dicesElements}
+        </div>
+        <button className="roll-dice" onClick={rollDice}>{gameWon ? 'New Game' : 'Roll'}</button>
+    </main>
     )
 }
 

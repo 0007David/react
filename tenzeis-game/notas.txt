@@ -1,0 +1,18 @@
+notas.txt
+
+Capstone Project #1 - Tenzeis
+
+- Tenzeis: Intro
+- Tenzeis: Setup
+- Tenzeis: Die component
+- Tenzeis: Generate 10 random numbers
+- Tenzeis: May array to Die Components
+- Tenzeis: Roll dice button
+- Tenzeis: Change dice to objects
+- Tenzeis: Styling held dice
+- Tenzeis: Hold dice Part 1, part 2, part 3
+- Tenzeis: End game Part 1, part 2, part 3
+- Tenzeis: Lazy State Initialization
+- Tenzeis: New game
+- Tenzeis: Accessibility Improments Part 1, part 2
+- Tenzeis: Outro
