@@ -31,8 +31,10 @@ import Confetti from 'react-confetti';
  */
 
 function Main() {
-    const [dices, setDices] = React.useState(generateAllNewDice())
-    // const { width, height } = useWindowSize()
+    // Lazy State Initialization
+    const [dices, setDices] = React.useState(() => generateAllNewDice())
+    // React.useState(generateAllNewDice())
+    const buttonRef = React.useRef(null)
     /**
      * Challenge:
      * Log "Game won!" to the console only if the 2 winning
@@ -53,12 +55,20 @@ function Main() {
     const gameWon = dices.every(
         ele => (ele.isHeld && ele.value === dices[0].value));
 
+    React.useEffect(() => {
+        if (gameWon) {
+            buttonRef.current.focus();
+            console.log('sasaads', buttonRef);
+        }
+    }, [gameWon])
     /**
      * Challenge:
      * Make the confetti drop when the game is won! 🎉🎊
      */
 
     function generateAllNewDice() {
+        console.log("create a generateAllNewDice");
+
         // Imperativa approach
         /*const newDice = [];
         for (let index = 0; index < 10; index++) {
@@ -71,7 +81,7 @@ function Main() {
         return new Array(10)
             .fill({})
             .map(() => {
-                const randomNumber = Math.ceil(Math.random() * 6)
+                const randomNumber = 5//Math.ceil(Math.random() * 6)
                 return { value: randomNumber, isHeld: false, id: nanoid() }
             });
     }
@@ -117,11 +127,15 @@ function Main() {
      * just updating the `value` property of the die object.
      */
     function rollDice() {
-        setDices(prevDices => prevDices.map(dice => {
-            return !dice.isHeld ?
-                { ...dice, value: Math.ceil(Math.random() * 6) } :
-                dice
-        }))
+        if (!gameWon) {
+            setDices(prevDices => prevDices.map(dice => {
+                return !dice.isHeld ?
+                    { ...dice, value: Math.ceil(Math.random() * 6) } :
+                    dice
+            }))
+        } else {
+            setDices(generateAllNewDice());
+        }
     }
     /**
     * Challenge: Update the array of numbers in state to be
@@ -180,16 +194,35 @@ function Main() {
      * We can derive the gameWon status based on the condition(s) of the current
      * dice state on every render.
      */
-
+    /**
+   * Challenge:
+   * Make it so when the game is over, the "New Game" button
+   * automatically receives keyboard focus so keyboard users
+   * can easily trigger that button without having to tab
+   * through all the dice first.
+   * 
+   * Hints:
+   * 1. Focusing a DOM element with the DOMNode.focus() method
+   *    requires accessing the native DOM node. What tool have
+   *    we learned about that allows us to do that?
+   * 
+   * 2. Automatically calling the .focus() on a DOM element when
+   *    the game is won requires us to synchronize the local
+   *    `gameWon` variable with an external system (the DOM). What
+   *    tool have we learned about that allows us to do that?
+   */
 
     return (<main>
         {gameWon ? <Confetti /> : null}
+        <div aria-live="polite" className="sr-only">
+            {gameWon && <p>Congratulations! You won! Press "New Game" to start again.</p>}
+        </div>
         <h1 className="title">Tenzies</h1>
         <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
         <div className="dice-container">
             {dicesElements}
         </div>
-        <button className="roll-dice" onClick={rollDice}>{gameWon ? 'New Game' : 'Roll'}</button>
+        <button ref={buttonRef} className="roll-dice" onClick={rollDice}>{gameWon ? 'New Game' : 'Roll'}</button>
     </main>
     )
 }
