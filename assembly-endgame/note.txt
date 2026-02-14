@@ -93,3 +93,172 @@ SAVE THE GUESSED LETTERS:
  * Don't worry about whether it was a right or wrong 
  * guess yet.
  */
+
+ KEYBOARD LETTER STYLE FOR GUESSED 
+ /**
+ * Goal: Allow the user to start guessing the letters
+ * 
+ * Challenge: Update the keyboard when a letter is right
+ * or wrong.
+ * 
+ * Bonus: use the `clsx` package to easily add conditional 
+ * classNames to the keys of the keyboard. Check the docs 
+ * to learn how to use it 📖
+ */
+
+ONLY DISPLAY CORRECTLY GUESSED LETTER
+/**
+ * Goal: Allow the user to start guessing the letters
+ * 
+ * Challenge: Only display the correctly-guessed letters
+ * in the word
+ */
+
+ WRONG GUESS COUNT 
+ /**
+ * Goal: Add in the incorrect guesses mechanism to the game
+ * 
+ * Challenge: Derive a variable (`wrongGuessCount`) for the 
+ * number of incorrect guesses by using the other state 
+ * values we're already holding in the component.
+ * 
+ * console.log the wrongGuessCount for now
+ */
+
+ LOST LANGUAGES 
+ /**
+ * Goal: Add in the incorrect guesses mechanism to the game
+ * 
+ * Challenge: When mapping over the languages, determine how
+ * many of them have been "lost" and add the "lost" class if
+ * so.
+ * 
+ * Hint: use the wrongGuessCount combined with the index of
+ * the item in the array while inside the languages.map code
+ */
+
+ IS_GAME_OVER
+ /**
+ * Goal: Add in the incorrect guesses mechanism to the game
+ * 
+ * Challenge:
+ * 1. Create a variable `isGameOver` which evaluates to `true`
+ *    if the user has guessed incorrectly 8 times. Consider how
+ *    we might make this more dynamic if we were ever to add or
+ *    remove languages from the languages array.
+ * 2. Conditionally render the New Game button only if the game
+ *    is over.
+ */
+
+ DISPLAY WON/LOST status
+ /**
+ * Goal: Add in the incorrect guesses mechanism to the game
+ * 
+ * Challenge:
+ * Conditionally render either the "won" or "lost" statuses
+ * from the design, both the text and the styles, based on the
+ * new derived variables.
+ * 
+ * Note: We always want the surrounding `section` to be rendered,
+ * so only change the content inside that section. Otherwise the
+ * content on the page would jump around a bit too much.
+ */
+
+ BACKLOG INVENTORY
+ /**
+ * Backlog:
+ * 
+ * ✅ Farewell messages in status section
+ * - Fix a11y issues
+ * - Make the new game button work
+ * - Choose a random word from a list of words
+ * - Confetti drop when the user wins
+ */
+
+ FAREWELL MESSAGES
+ /**
+ * Challenge: Bid farewell to each programming language
+ * as it gets erased from existance 👋😭
+ * 
+ * Use the `getFarewellText` function from the new utils.js
+ * file to generate the text.
+ * 
+ * Check hint.md if you're feeling stuck, but do your best
+ * to solve the challenge without the hint! 🕵️
+ */
+ You'll need to find a way to know if the most recently-
+guessed letter was correct or not, so you're only
+displaying the farewell message after wrong guesses.
+
+DISABLE KEYBOARD WHEN IS GAME OVER 
+/**
+ * Backlog:
+ * 
+ * ✅ Farewell messages in status section
+ * ✅ Disable the keyboard when the game is over
+ * - Fix a11y issues
+ * - Make the New Game button reset the game
+ * - Choose a random word from a list of words
+ * - Confetti drop when the user wins
+ * 
+ * Challenge: Disable the keyboard when the game is over
+ */
+
+ MAKE THE GAME MORE a11y-FRIENDLY
+
+
+
+ CHOOSE RANDOM WORD
+ /**
+ * Backlog:
+ * 
+ * ✅ Farewell messages in status section
+ * ✅ Disable the keyboard when the game is over
+ * ✅ Fix a11y issues
+ * - Choose a random word from a list of words
+ * - Make the New Game button reset the game
+ * - Confetti drop when the user wins
+ * 
+ * Challenge: Choose a random word from a list of words
+ * 
+ * 1. Create a new function in utils.js that chooses a random
+ *    word from the imported array of words and returns it
+ * 2. import the function into this file
+ * 3. Figure out where to use that function.
+ */
+
+
+ NEW GAME BUTTON RESETS THE GAME
+ /**
+ * Backlog:
+ * 
+ * ✅ Farewell messages in status section
+ * ✅ Disable the keyboard when the game is over
+ * ✅ Fix a11y issues
+ * ✅ Choose a random word from a list of words
+ * ✅ Make the New Game button reset the game
+ * - Reveal what the word was if the user loses the game
+ * - Confetti drop when the user wins
+ * 
+ * Challenge: Make the New Game button reset the game
+ */
+
+DISPLAY MISSED LETTERS WHEN LOST
+/**
+ * Backlog:
+ * 
+ * ✅ Farewell messages in status section
+ * ✅ Disable the keyboard when the game is over
+ * ✅ Fix a11y issues
+ * ✅ Choose a random word from a list of words
+ * ✅ Make the New Game button reset the game
+ * - Reveal what the word was if the user loses the game
+ * - Confetti drop when the user wins
+ * 
+ * Challenge: Reveal the missing letters of the word if the user
+ * loses the game. Style the missing letters to have the same red
+ * color as the wrong letter keys.
+ */
+
+ Certificate:
+ https://scrimba.com/learn-react-c0e;cert24zAwPPowUv7XjgyfLjiEnrgk5R2cmNaU3XLL

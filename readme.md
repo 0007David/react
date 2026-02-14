@@ -127,3 +127,7 @@ This is where the concept of UI as a function of state comes from.
 ### Project2: Assembly: Endgame
 
 ### Turn your certificate into an assets
+
+
+ Certificate:
+ https://scrimba.com/learn-react-c0e;cert24zAwPPowUv7XjgyfLjiEnrgk5R2cmNaU3XLL
