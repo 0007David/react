@@ -1,0 +1,44 @@
+button.square {
+    background-color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 1px solid lightgray;
+    width: 35px;
+    height: 35px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.square {
+    /* margin-bottom: 1rem; */
+}
+
+.status {
+    margin-bottom: .5rem;
+    /* color: lightgray; */
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.board-row {
+    /* border: 1px solid tomato; */
+    /* margin-top: 1.5rem; */
+    display: flex;
+}
+
+.game {
+    background: lightcoral;
+    width: 500px;
+}
+
+.game-board {
+    background: lightblue;
+    width: 400px;
+}
+
+.game-info {
+    width: 300px;
+    background: lightgreen;
+}
