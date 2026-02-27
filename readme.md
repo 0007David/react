@@ -1,14 +1,33 @@
 # List of content
 
+- How to get the most from this course
+  - The easy way is the hard way
+  - Learn by doing
+  - Avoid [Tutorial Hell](https://codeburst.io/digging-my-way-out-of-tutorial-hell-6dd5f9927384)
+  - You're not being graded
+  - [Make it tick](https://www.amazon.com/dp/0674729013/ref=cm_sw_r_as_gl_api_gl_i_AW9FHFZ8KGFCHANV427C?linkCode=ml1&tag=mademindful-20) your brain [book](https://pubhtml5.com/hmeo/meox/)
+    - Active retrieval
+    - Spaced repettition
+    - Varied applications
+
 ## Learn React
 
 React basics in the most interactive, hands-on way possible.
 
-### Static Pages
+### Static Pages [(01-React-Facts)](./01-react-facts/readme.md)
 
-- Digital Business Card
-- [Figma File](https://www.figma.com/design/4ctPLUvIn5b5Ep6YPOZWWd/Digital-Business-Card?node-id=0-1&p=f)
-- [FIgma FIle](https://www.figma.com/file/4ctPLUvIn5b5Ep6YPOZWWd/Digital-Business-Card?node-id=0%3A1)
+- What we'll learn
+  - Learn to "Think in React"
+  - Why you should care about React
+  - Setting up a new React project
+  - JSX
+  - Custom Components
+
+- Figma Resources
+  - [React Facts](https://www.figma.com/design/xA1rJVQOorqMW6xjGdBLcI/ReactFacts?node-id=0-1&p=f)
+  - Digital Business Card
+  - [Figma File](https://www.figma.com/design/4ctPLUvIn5b5Ep6YPOZWWd/Digital-Business-Card?node-id=0-1&p=f)
+  - [FIgma FIle](https://www.figma.com/file/4ctPLUvIn5b5Ep6YPOZWWd/Digital-Business-Card?node-id=0%3A1)
 
 #### Recap
 

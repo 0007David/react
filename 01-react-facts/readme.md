@@ -1,0 +1,2 @@
+# Static Pages in React
+
